@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Ruby on Rails app that enables upload of csv file and store people data into database.
 
-Things you may want to cover:
+Versions used in app:
 
-* Ruby version
+* Ruby version - 2.7.3p183
 
-* System dependencies
+* Rails version - 6.0.4
 
-* Configuration
+* Database - Sqlite3
 
-* Database creation
+Frontend technologies used in app:
 
-* Database initialization
+* Bootstrap - 4.3.1
 
-* How to run the test suite
+* jQuery - 3.6.0
 
-* Services (job queues, cache servers, search engines, etc.)
+Steps to start application:
 
-* Deployment instructions
+* Clone the application
 
-* ...
+* Update the database.yml file
+
+* Create and migrate database
+
+* start app with starting rails server in one terminal tab and webpacker in another
