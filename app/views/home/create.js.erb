@@ -1,0 +1,8 @@
+var uniq_id = "<%= @person.uniq_id %>";
+
+<% if @person.errors.present? %>
+  $('.' + uniq_id).html("<%= escape_javascript render(partial: 'person_form_data', :locals => { person: @person }) %>");
+  personFormSubmit();
+<% else %>
+  $('.' + uniq_id).html("<%= escape_javascript render(partial: 'person_table_row', :locals => { person: @person }) %>");
+<% end %>

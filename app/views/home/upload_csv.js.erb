@@ -1,0 +1,8 @@
+<% @people_records.each do |person| %>
+  <% if person.errors.present? %>
+    $('.people-table-data').append("<%= escape_javascript render(partial: 'form_for_invalid_record', :locals => { person: person }) %>");
+    personFormSubmit();
+  <% else %>
+    $('.people-table-data').append("<%= escape_javascript render(partial: 'add_person_row', :locals => { person: person }) %>");
+  <% end %>
+<% end %>

@@ -1,0 +1,9 @@
+<%= form_for :person, url: create_path, method: :post, remote: true do |f| %>
+  <td><%=f.hidden_field :uniq_id, name: 'uniq_id', value: person.uniq_id, class: person.uniq_id%></td>
+  <td><%=f.text_field :first_name, name: 'first_name', value: person.first_name, class: person.uniq_id  %></td>
+  <td><%=f.text_field :last_name, name: 'last_name', value: person.last_name, class: person.uniq_id  %></td>
+  <td><%=f.text_field :email, name: 'email', value: person.email, class: person.uniq_id  %></td>
+  <td><%=f.text_field :phone, name: 'phone', value: person.phone, class: person.uniq_id  %></td>
+  <td><%= person.errors.full_messages.join(', ') %></td>
+  <td><%= f.submit 'Save', class: 'btn btn-sm btn-primary person-submit', data: { uniq_id: ".#{person.uniq_id}" } %></td>
+<% end %>
