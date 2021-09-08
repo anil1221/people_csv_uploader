@@ -16,7 +16,9 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
 import './bootstrap_custom.js'
+import './set_file_name_label'
 import personFormSubmit from './person_form_submit'
 global.personFormSubmit = personFormSubmit;
 
